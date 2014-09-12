@@ -44,7 +44,7 @@
     			      <ul class="right">
     			      	<% if signed_in? %>
                     <% if pending(current_user.id) > 0 %>
-                      <li class='white'>Notfications<div id='notifications' class='label secondary'><%= pending(current_user.id) %></div></li>
+                      <li class='white'>Notfications<span id='notifications'><%= link_to pending(current_user.id), friends_path %></span></li>
                     <% end %>
     			        <li class="has-dropdown" class=<% if controller?("user", "friends") && action?("index", "show", "edit") %> "active"<%end%>>
     			          <a href="/users">User Account</a>

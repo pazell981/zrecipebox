@@ -113,9 +113,11 @@
 	</div>
 	<div id='instructionspanel' class='panel short row'>
 		<div class='large-12 column'>
-			<% newLineSplit(@recipe.instructions).each do |instruction| %>
-				<p><%= instruction %></p>
-			<% end %>
+			<ol>
+				<% newLineSplit(@recipe.instructions).each do |instruction| %>
+					<li><%= instruction %></li>
+				<% end %>
+			</ol>
 		</div>
 	</div>
 	<div id='commentspanel' class='panel short row'>

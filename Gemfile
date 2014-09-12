@@ -55,18 +55,20 @@ gem 'has_scope'
 # for angular
 gem 'angularjs-rails'
 
+gem "better_errors"
+gem "binding_of_caller"
 
 #gem 'puma'
 
-group :development, :test do
+group :development do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
 	gem 'betterlorem', '~> 0.1.2'
 	gem 'lorem-image-ware', '~> 0.1.0'
 	# Use hirb
 	gem 'hirb'
-  gem "better_errors"
-  gem "binding_of_caller"
+  
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
  	gem 'spring'
 	gem "rspec"
