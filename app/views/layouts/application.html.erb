@@ -11,17 +11,6 @@
   		background-image: url("<%= asset_path("backgrounds/" + random_background) %>");
   	}
   </style>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#login").click(function(){
-        $('#loginpanel').click()
-        return false
-      })
-      $('.disabled').click(function(e){
-        return false;
-      });
-    })
-  </script>
 </head>
   <body>
     <div id='wrapper'>
@@ -78,10 +67,6 @@
     		</div>
     	</div>
     </div>
-    <%= javascript_include_tag "application" %>
-      <SCRIPT TYPE="text/javascript">
-        $(function(){ $(document).foundation(); });
-      </SCRIPT>
-
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

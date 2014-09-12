@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require jquery.tablesorter
 //= require foundation
 //= require underscore-min
@@ -26,3 +27,13 @@
 //= require masonry/box-maker
 
 $(function(){ $(document).foundation(); });
+
+  $(document).ready(function(){
+    $("#login").click(function(){
+      $('#loginpanel').click()
+      return false
+    })
+    $('.disabled').click(function(e){
+      return false;
+    });
+  })
