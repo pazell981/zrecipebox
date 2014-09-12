@@ -23,62 +23,65 @@
     })
   </script>
 </head>
-<body>
-    <body>
-      <div id='wrapper'>
-      	<div id='container'>
-      		<div id='body'>
-      			<div class="fixed">
-      			  <nav class="top-bar" data-topbar role="navigation">
-      			    <section class="top-bar-section">
-      			      <!-- Left Nav Section -->
-      			      <% if signed_in? %>
-	      			      <ul class="left">
-	      			        <li class=<% if controller?("recipes") && action?("index", "show", "edit") %>"active disabled"<%end%> ><a href="/recipes">My Recipes</a></li>
-                      <li class=<% if controller?("recipebox") && action?("index", "show", "edit") %>"active disabled"<%end%>><a href="/recipebox">My Recipe Box</a></li>
-	      			        <li class=<% if controller?("friendsbox") && action?("index", "show") %> "active disabled"<%end%>><a href="/friendsbox">Friend's Recipes</a></li>
-	      			        <li class="divider"></li>
-	      			        <!-- <li class=<% if controller?("friendsbox") && action?("index disabled", "show") %> "active disabled"<%end%>><a href="/cookbook">Explore the Cookbook</a></li> -->
-	      			      </ul>
-	      			    <% end %>
-      			      <!-- Right Nav Section -->
-      			      <ul class="right">
-      			      	<% if signed_in? %>
-                      <% if pending(current_user.id) > 0 %>
-                        <li class='white'>Notfications<div id='notifications' class='label secondary'><%= pending(current_user.id) %></div></li>
-                      <% end %>
-      			        <li class="has-dropdown" class=<% if controller?("user", "friends") && action?("index", "show", "edit") %> "active"<%end%>>
-      			          <a href="/users">User Account</a>
-      			          <ul class="dropdown">
-      			            <li class=<% if controller?("user") && action?("show", "edit") %> "active disabled"<%end%>><a href="/users/<%= current_user.id %>">Show Account Information</a></li>
-      			            <li class=<% if controller?("friends") && action?("index") %> "active disabled"<%end%>><a href="/friends">Find Friends<% if pending(current_user.id) > 0 %><div id='notifications' class='label secondary'><%= pending(current_user.id) %></div><% end %></a></li>
-                        <li class=<% if controller?("user") && action?("show", "edit") %> "active disabled"<%end%>><a href="/users">Edit Settings</a></li>
-      			          </ul>
-      			        </li>
-      			        <% end %>
-      			        <% if signed_in? %>
-	      			        <li class="has-form">
-	      			           <%= link_to('Log-out', logoff_path, :class => :button) %>
-	      			        </li>
-                    <% else %>
-                    	<li class="has-form">
-                        <a href="#" id='login' class='button'>Log-in</a>
-      			        	</li>
-                  <% end %>
+  <body>
+    <div id='wrapper'>
+    	<div id='container'>
+    		<div id='body'>
+    			<div class="fixed">
+    			  <nav class="top-bar" data-topbar role="navigation">
+    			    <section class="top-bar-section">
+    			      <!-- Left Nav Section -->
+    			      <% if signed_in? %>
+      			      <ul class="left">
+      			        <li class=<% if controller?("recipes") && action?("index", "show", "edit") %>"active disabled"<%end%> ><a href="/recipes">My Recipes</a></li>
+                    <li class=<% if controller?("recipebox") && action?("index", "show", "edit") %>"active disabled"<%end%>><a href="/recipebox">My Recipe Box</a></li>
+      			        <li class=<% if controller?("friendsbox") && action?("index", "show") %> "active disabled"<%end%>><a href="/friendsbox">Friend's Recipes</a></li>
+      			        <li class="divider"></li>
+      			        <!-- <li class=<% if controller?("friendsbox") && action?("index disabled", "show") %> "active disabled"<%end%>><a href="/cookbook">Explore the Cookbook</a></li> -->
       			      </ul>
-      			    </section>
-      			  </nav>
-      			</div>
-      			<div id='title'>
-      				<h1>RecipeBox</h1>
-      				<h4><%= @subtitle %></h4>
-      			</div>
-      			<div id='content'>
-      				<%= yield %>
-      			</div>
-      		</div>
-      	</div>
-      </div>
-    </body>
+      			    <% end %>
+    			      <!-- Right Nav Section -->
+    			      <ul class="right">
+    			      	<% if signed_in? %>
+                    <% if pending(current_user.id) > 0 %>
+                      <li class='white'>Notfications<div id='notifications' class='label secondary'><%= pending(current_user.id) %></div></li>
+                    <% end %>
+    			        <li class="has-dropdown" class=<% if controller?("user", "friends") && action?("index", "show", "edit") %> "active"<%end%>>
+    			          <a href="/users">User Account</a>
+    			          <ul class="dropdown">
+    			            <li class=<% if controller?("user") && action?("show", "edit") %> "active disabled"<%end%>><a href="/users/<%= current_user.id %>">Show Account Information</a></li>
+    			            <li class=<% if controller?("friends") && action?("index") %> "active disabled"<%end%>><a href="/friends">Find Friends<% if pending(current_user.id) > 0 %><div id='notifications' class='label secondary'><%= pending(current_user.id) %></div><% end %></a></li>
+                      <li class=<% if controller?("user") && action?("show", "edit") %> "active disabled"<%end%>><a href="/users">Edit Settings</a></li>
+    			          </ul>
+    			        </li>
+    			        <% end %>
+    			        <% if signed_in? %>
+      			        <li class="has-form">
+      			           <%= link_to('Log-out', logoff_path, :class => :button) %>
+      			        </li>
+                  <% else %>
+                  	<li class="has-form">
+                      <a href="#" id='login' class='button'>Log-in</a>
+    			        	</li>
+                <% end %>
+    			      </ul>
+    			    </section>
+    			  </nav>
+    			</div>
+    			<div id='title'>
+    				<h1>RecipeBox</h1>
+    				<h4><%= @subtitle %></h4>
+    			</div>
+    			<div id='content'>
+    				<%= yield %>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <%= javascript_include_tag "application" %>
+      <SCRIPT TYPE="text/javascript">
+        $(function(){ $(document).foundation(); });
+      </SCRIPT>
+
 </body>
 </html>
