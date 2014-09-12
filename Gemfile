@@ -46,8 +46,6 @@ gem 'foundation-rails'
 gem 'will_paginate', '~> 3.0.5'
 gem 'masonry-rails'
 
-
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
@@ -76,4 +74,5 @@ end
 
 group :production do 
 	gem 'pg'
+	gem 'rails_12factor', group: :production
 end
