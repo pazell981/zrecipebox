@@ -1,0 +1,16 @@
+<h4>Edit Categories</h4>
+<% if @category.errors.any? %>
+	<div id="error_explanation" class='alert-box warning radius'>
+	  <h2><%= pluralize(@category.errors.count, "error") %> prevented the product from being created:</h2>
+	  <ul>
+	    <% @category.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	  </ul>
+	</div>
+<% end %>
+<%= form_for @category do |f| %>
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+	<%= f.text_field :category %>
+	<%= f.submit "Update Category", :class => :button %>
+<% end %>

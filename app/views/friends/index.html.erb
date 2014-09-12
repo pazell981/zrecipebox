@@ -1,0 +1,41 @@
+<h4><%= current_user.first_name %>'s Friends</h4>
+<%= button_to "Add a Friend", new_friend_path, :class => 'success button right', :method => :get %>
+<table>
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% if @friends %>
+			<% @friends.each do |friend| %>
+				<tr>
+					<td><%= friend.friend.first_name %></td>
+					<td><%= friend.friend.last_name %></td>
+					<td>
+						<% if friend.status == "pending" %>
+							<%= form_for @friend, :url => friend_path(friend.id), :method => :put do |f| %>
+								<%= f.hidden_field :status, :value => "confirm" %>
+								<div class='button-group'>
+									<span class='button small disabled secondary'>PENDING</span>
+								<%= f.submit "Confirm Friend", :class => "small button success" %>
+								</div>
+							<% end %>
+						<% end %>
+						<% if friend.status == "confirm" %>
+							<a href="#" data-reveal-id="friend<%= friend.id %>"><button class="small button alert" >Un-friend</button></a>
+						<% end %>
+					</td>
+				</tr>
+				<div id="friend<%= friend.id %>" class="reveal-modal" data-reveal>
+				  <h2>Are you sure you want to remove this friend?</h2>
+				  <p>Once <%= friend.user.first_name %> is un-friended you will have to go through the friending process again.</p>
+				  <%= button_to "Delete", friend_path(friend.id), :method=>:delete, :class => "large button alert right" %>
+				  <a class="close-reveal-modal">&#215;</a>
+				</div>
+			<% end %>
+		<% end %>
+	</tbody>
+</table>

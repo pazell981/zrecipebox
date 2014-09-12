@@ -1,0 +1,29 @@
+<h4>Edit <%= current_user.first_name %>'s User Information</h4>
+<%= form_for @user do |f| %>
+  <% if flash[:errors] %>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#newuserpanel').click()
+        return false
+      })
+    </script>
+  <div id="error_explanation" class='alert-box warning radius'>
+      <ul>
+      <% flash[:errors].each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %> 
+  <%= f.label :password %>
+  <%= f.password_field :password %> 
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "Update Account", :class => 'button' %>
+<% end %>

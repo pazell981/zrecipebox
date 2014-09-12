@@ -1,0 +1,40 @@
+<h4>Find a friend</h4>
+<%= form_tag new_friend_path, :method => :get do %>
+	<h6>Find by Name</h6>
+	<%= label_tag :first_name %>
+	<%= text_field_tag :first_name %>
+	<%= label_tag :last_name %>
+	<%= text_field_tag :last_name %>
+	<h6>Find by E-mail</h6>
+	<%= label_tag :email %>
+	<%= text_field_tag :email %>
+	<%= submit_tag :Find, :class=>"button right" %>
+<% end %>
+
+<% if @friendsearch %>
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @friendsearch.each do |friend| %>
+				<tr>
+					<td><%= friend.first_name %></td>
+					<td><%= friend.last_name %></td>
+					<td>
+						<%= form_for @addfriend do |f| %>
+							<%= f.hidden_field :user_id, :value =>current_user.id %>
+							<%= f.hidden_field :friend_id, :value => friend.id %>
+							<%= f.hidden_field :status, :value => "pending" %>
+							<%= f.submit "Add Friend", :class => "small button success" %>
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+<% end %>

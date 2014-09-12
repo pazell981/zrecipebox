@@ -1,0 +1,192 @@
+<div class='row'>
+	<h3 class='large-8 column'><%= @recipe.title %></h3>
+	<div class='large-4 column'>
+		<%= form_for @like, :html =>{:id=>"like_form"} do |f| %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :recipe_id, :value => @recipe.id %>
+			<%= f.hidden_field :like, :value => "yes" %>
+		<% end %>
+		<div class="icon-bar four-up right">
+		  <a href="/recipebox" class="item">
+		    <i class="fi-home" ></i>
+		    <label>Home</label>
+		  </a>
+		  <a href="/recipebox/<%= @recipe.id %>/edit" class="item">
+		    <i class="fi-page-edit" ></i>
+		    <label>Edit</label>
+		  </a>
+	   	
+	  	<a id="like" class="item <% if @liked && @liked.like=="yes" %><%= "disabled" %><% end %>">
+	      <i class="fi-like" ></i>
+	      <label>Like</label>
+	    </a>
+		  <a data-reveal-id="delete" class="item alert">
+		    <i class="fi-page-delete" ></i>
+		    <label>Remove</label>
+		  </a>
+		</div>
+	</div>
+</div>
+<div id="delete" class="reveal-modal" data-reveal>
+  <h2>Are you sure you want to remove this recipe?</h2>
+  <p>Once <%= @recipe.title %> is removed from your recipe box you will have to find it again to bookmark it again.</p>
+  <%= link_to "Delete", recipebox_path(@recipe.id), :method => :delete, :class => "button secondary alert right" %>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<div id='navigator'>
+	<div id='accordion'>
+    <h4 id="information">Recipe Information</h4>
+    <div class="content">
+      <ul>
+      	<li>Yield</li>
+      	<li>Categories</li>
+      	<li>Misc. Information</li>
+      </ul>
+    </div>
+    <h4 id="ingredients">Ingredients</h4>
+    <div class="content">
+    </div>
+    <h4 id="instructions">Instructions</h4>
+    <div  class="content">
+    </div>
+    <h4 id="comments">Comments</h4>
+    <div class="content">
+    </div>
+	</div>
+</div>
+<div id='recipeshow'>
+	<div id='informationpanel' class='row panel tall'>
+		<div class='row' data-equalizer>
+			<div class ='large-2 column' data-equalizer-watcher>
+				<p><label>Description:  </label>
+				<%= @recipe.description %></p>
+			</div>
+			<div class='large-3 column' data-equalizer-watcher>
+				<p><label>Yield:  </label><%= @recipe.yield %></p>
+				<p><label>Actual Prep Time:  </label><%= @recipe.actual_time %></p>
+				<p><label>Total Time:  </label><%= @recipe.total_time %></p>
+				<p><label>Source:  </label><%= @recipe.source %></p>
+			</div>
+			<div class='large-3 column' data-equalizer-watcher>
+				<label>Categories:  </label>
+				<ul>
+					<% @recipe.categories.each do |category| %>
+						<% if category.user_id == current_user.id %>
+							<li><%= category.category %></li>
+						<% end %>
+					<% end %>
+				</ul>
+				<p><label>Family Secret: </label>
+					<% if @recipe.public == "yes" %>
+						<%= "Private" %>
+					<% else %>
+						<%= "Public" %>
+					<% end %>
+				</p>
+				<p><label>Favorite: </label>
+					<% if !@recipe.favorites.empty? %>
+						<% @recipe.favorites.each do |favorite| %>
+							<% if favorite.favorite == "Yes" && favorite.user_id == current_user.id %>
+								<%= "Yes" %>
+							<% end %>
+						<% end %>
+					<% else %>
+						<%= "No" %>
+					<% end %>
+				</p>
+			</div>
+			<div class='large-4 column' data-equalizer-watcher>
+				<%= image_tag @recipe.image.url(:medium), :id=>:recipeimage, :class=>:right %>
+			</div>
+		</div>
+	</div>
+	<div id='ingredientspanel' class='panel short row'>
+		<div class='large-12 column'>
+			<table>
+				<% newLineSplit(@recipe.ingredients).each do |ingredient| %>
+						<tr>
+							<% spaceSplit(ingredient).each do |quantity| %>
+								<td><%= quantity %></td>
+							<% end %>
+						</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+	<div id='instructionspanel' class='panel short row'>
+		<div class='large-12 column'>
+			<% newLineSplit(@recipe.instructions).each do |instruction| %>
+				<p><%= instruction %></p>
+			<% end %>
+		</div>
+	</div>
+	<div id='commentspanel' class='panel short row'>
+		<div class='large-8 column'>
+			<% if @comments %>
+				<% @comments.each_with_index do |comment, index| %>
+					<div class="panel radius 
+					<% if index%2!=0 %> 
+						<%= callout %>
+					<% end %>
+					">
+					  	<h6><%= comment.user.first_name %> commented:</h6>
+					  	<p><%= comment.comment %></p>
+						</div>
+				<% end %>
+			<% end %>
+		</div>
+		<div class='large-4 column'>
+			<% if flash[:errors] %>
+				<script type="text/javascript">
+				  $(document).ready(function(){
+				    $('#comments').click()
+				    return false
+				  })
+				</script>
+				<div data-alert class="alert-box alert round">
+				  <ul>
+				  	<% flash[:errors].each do |error| %>
+				  		<li><%= error %></li>
+				  	<% end %>
+				  </ul>
+				  <a href="#" class="close">&times;</a>
+				</div>
+			<% end %>
+			<%= form_for @comment do |f| %>
+				<%= f.hidden_field :author_id, :value=>current_user.id %>
+				<%= f.hidden_field :recipe_id, :value=>@recipe.id %>
+				<%= f.text_area :comment %>
+				<%= f.submit :Comment, :class => "button tiny right" %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#accordion").accordion({
+			heightStyle: "content",
+			header: "h4"
+		});
+		$('#accordion h4').click(function(e) {
+		  if($(this).hasClass('ui-accordion-header-active'))
+		    return false;
+		});
+		$("#accordion h4").click(function(){
+			if ($(this).attr("id")=="information") {
+				$("#recipeimage").animate({height: "175px"}, 300, "linear");
+			} else {
+				$("#recipeimage").animate({height: "75px"}, 300, "linear");
+			}
+			$("#recipeshow").children("div").addClass("short");
+			$("#recipeshow").children("div").removeClass("tall", "easeOutCirc");
+			$("#"+$(this).attr("id")+"panel").addClass("tall", "easeInCirc");
+		})
+		$("#like").click(function(){
+			if ($(this).hasClass("disabled")){
+			} else {
+				$("#like_form").submit()
+			}
+		})
+	});
+</script>

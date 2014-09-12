@@ -1,0 +1,87 @@
+<dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel1">Browse Recipes</a></dd>
+  <dd><a href="#panel2">Search Recipes</a></dd>
+</dl>
+<div class="tabs-content" ng-app='recipeApp'>
+  <div class="content active" id="panel1">
+    <div class id='magellan' style="top: 145px">
+      <dl class="sub-nav">
+        <% @alphabet.each do |a| %>
+          <dd><a href="#<%= a %>" class='magellan_link'><%= a.upcase %></a></dd>
+        <% end %>
+      </dl>
+    </div>
+    <% if @recipes %>
+      <% @alphabet.each do |a| %>
+        <section id="<%= a %>">
+          <h5><%= a %></h5>
+          <% @recipes[a].each do |recipe| %>
+            <table>
+              <tbody>
+                <tr onclick="document.location = '/friendsbox/<%=recipe.id %>';">
+                  <td>
+                    <% if recipe.image.url(:thumb)!="/images/thumb/missing.jpg" %>
+                      <%= image_tag recipe.image.url(:thumb) %>
+                    <% end %>
+                  </td>
+                  <td><%= recipe.title %></td>
+                  <td><%= recipe.description %></td>
+                </tr>
+              </tbody>
+            </table>
+          <% end %>
+        </section>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="content" id="panel2" ng-controller="FriendBoxCtrl">
+    <dl class="sub-nav">
+      <dt>Filter: </dt>
+      <dd><input type="text"  ng-model='filter.title'></dd>
+<!--       <dd><select ng-model='filter.category'>
+        <% @categories.each do |category| %>
+          <option value="<%= category.id %>"><%= category.category %></option>
+        <% end %>
+      </select>
+      </dd>
+      <dd>favorite switch</dd>
+      <dd class='tiny switch radius'><input id='filter_favorite' type='check_box' value='yes' ng-model='filter.favorite'><label for="favorite">Yes</label></dd> -->
+    </dl>
+      <table id="recipetable" class="tablesorter">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="recipe in recipes | filter: { title: filter.title, category: filter.category, favorite: filter.favorite } | orderBy: title" >
+            	<a href="/friendsbox/{{recipe.id}}">
+              <td><img src="{{recipe.image}}"></td>
+              <td>{{recipe.title}}</td>
+              <td>{{recipe.category_id}}</td></a>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<script src="/assets/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="/assets/navbar2.js"></script>
+<script src="/assets/waypoints.js"></script>
+<script type="text/javascript">
+  $('#body').scroll(function(){
+    if ($("#magellan").offset().top < 145){
+      $(".sub-nav").addClass('sticky')
+    } else {
+      $(".sub-nav").removeClass('sticky')
+    }
+  })
+  $(document).ready(function(){
+    $("#recipetable").tablesorter();
+    $(".filter").change(function(){
+      $("#filter").submit
+      return false;
+    });
+  })
+</script>

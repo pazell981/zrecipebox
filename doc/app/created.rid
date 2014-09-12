@@ -1,0 +1,27 @@
+Sun, 07 Sep 2014 10:20:49 -0700
+README.rdoc	Thu, 04 Sep 2014 13:40:57 -0700
+app/controllers/application_controller.rb	Fri, 05 Sep 2014 14:41:12 -0700
+app/controllers/cookbook_controller.rb	Thu, 04 Sep 2014 18:30:11 -0700
+app/controllers/friends_controller.rb	Thu, 04 Sep 2014 18:28:34 -0700
+app/controllers/friendsbox_controller.rb	Thu, 04 Sep 2014 18:29:31 -0700
+app/controllers/recipebox_controller.rb	Thu, 04 Sep 2014 18:31:38 -0700
+app/controllers/recipes_controller.rb	Sun, 07 Sep 2014 10:09:09 -0700
+app/controllers/sessions_controller.rb	Sat, 06 Sep 2014 08:16:48 -0700
+app/controllers/users_controller.rb	Sun, 07 Sep 2014 09:09:07 -0700
+app/helpers/application_helper.rb	Fri, 05 Sep 2014 18:07:45 -0700
+app/helpers/cookbook_helper.rb	Thu, 04 Sep 2014 18:30:11 -0700
+app/helpers/friends_helper.rb	Thu, 04 Sep 2014 18:28:34 -0700
+app/helpers/friendsbox_helper.rb	Thu, 04 Sep 2014 18:29:31 -0700
+app/helpers/recipebox_helper.rb	Thu, 04 Sep 2014 18:31:38 -0700
+app/helpers/recipes_helper.rb	Sat, 06 Sep 2014 16:26:58 -0700
+app/helpers/sessions_helper.rb	Fri, 05 Sep 2014 14:37:53 -0700
+app/helpers/users_helper.rb	Thu, 04 Sep 2014 18:26:19 -0700
+app/models/category.rb	Sun, 07 Sep 2014 08:18:55 -0700
+app/models/comment.rb	Sun, 07 Sep 2014 08:21:32 -0700
+app/models/favorite.rb	Sun, 07 Sep 2014 07:47:58 -0700
+app/models/friend.rb	Sun, 07 Sep 2014 07:48:11 -0700
+app/models/ingredient.rb	Sun, 07 Sep 2014 08:16:23 -0700
+app/models/recipe.rb	Sun, 07 Sep 2014 10:05:55 -0700
+app/models/recipe_box.rb	Thu, 04 Sep 2014 14:02:23 -0700
+app/models/recipe_category.rb	Sun, 07 Sep 2014 07:47:32 -0700
+app/models/user.rb	Sun, 07 Sep 2014 10:07:11 -0700

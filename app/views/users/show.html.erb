@@ -1,0 +1,18 @@
+<h4><%= current_user.first_name %>'s User Information</h4>
+<table>
+	<tbody>
+		<tr>
+			<td>First Name</td>
+			<td><%= current_user.first_name %></td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td><%= current_user.last_name %></td>
+		</tr>
+		<tr>
+			<td>E-mail</td>
+			<td><%= current_user.email %></td>
+		</tr>
+	</tbody>
+</table> 
+<%= link_to "Edit your information", edit_user_path(current_user.id) %>

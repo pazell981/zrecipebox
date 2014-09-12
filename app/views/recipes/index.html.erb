@@ -1,0 +1,168 @@
+<dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel1">Browse Recipes</a></dd>
+  <dd><a href="#panel2">Search Recipes</a></dd>
+  <dd><a href="#panel3" id='enterrecipe'>Enter Recipe</a></dd>
+</dl>
+<div class="tabs-content" ng-app='recipeApp'>
+  <div class="content active" id="panel1">
+    <div class id='magellan' style="top: 145px">
+      <dl class="sub-nav">
+        <% @alphabet.each do |a| %>
+          <dd><a href="#<%= a %>" class='magellan_link'><%= a.upcase %></a></dd>
+        <% end %>
+      </dl>
+    </div>
+    <% if @recipes %>
+      <% @alphabet.each do |a| %>
+        <section id="<%= a %>">
+          <h5><%= a %></h5>
+          <% @recipes[a].each do |recipe| %>
+            <table>
+              <tbody>
+                <tr onclick="document.location = '/recipes/<%=recipe.id %>';">
+                  <td>
+                    <% if recipe.image_file_name && recipe.image_file_name != "/images/thumb/missing.jpg" %>
+                      <%= image_tag recipe.image.url(:thumb) %>
+                    <% end %>
+                  </td>
+                  <td><%= recipe.title %></td>
+                  <td><%= recipe.description %></td>
+                </tr>
+              </tbody>
+            </table>
+          <% end %>
+        </section>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="content" id="panel2" ng-controller="RecipeCtrl">
+    <dl class="sub-nav">
+      <dt>Filter: </dt>
+      <dd><input type="text"  ng-model='filter.title'></dd>
+<!--       <dd><select ng-model='filter.category'>
+        <% @categories.each do |category| %>
+          <option value="<%= category.id %>"><%= category.category %></option>
+        <% end %>
+      </select>
+      </dd>
+      <dd>favorite switch</dd>
+      <dd class='tiny switch radius'><input id='filter_favorite' type='check_box' value='yes' ng-model='filter.favorite'><label for="favorite">Yes</label></dd> -->
+    </dl>
+      <table id="recipetable" class="tablesorter">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="recipe in recipes | filter: { title: filter.title, category: filter.category, favorite: filter.favorite } | orderBy: title" >
+              <td><img src="{{recipe.image}}"></td>
+              <td>{{recipe.title}}</td>
+              <td>{{recipe.category_id}}</td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="content" id="panel3">
+    <%= form_for @recipe do |f| %>
+      <% if @recipe.errors.any? %>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <script type="text/javascript">
+            $(document).ready(function(){
+              $('#enterrecipe').click()
+              return false
+            })
+          </script>
+          <div id="error_explanation" class='alert-box warning radius'>
+            <h2><%= pluralize(@recipe.errors.count, "error") %> prevented the product from being created:</h2>
+            <ul>
+              <% @recipe.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <div class='row' data-equalizer>
+        <div class='large-3 columns' data-equalizer-watch>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+          <%= f.label :description %>
+          <%= f.text_area :description, :id => 'description' %>
+        </div>
+        <div class='large-3 columns' data-equalizer-watch>
+          <%= f.label :yield %>
+          <%= f.text_field :yield %>
+          <%= f.label :actual_time, "Actual Prep Time" %>
+          <%= f.text_field :actual_time %>
+          <%= f.label :total_time %>
+          <%= f.text_field :total_time %>
+
+        </div>
+        <div class='large-3 columns' id='categories' data-equalizer-watch>
+          <label>Category:</label>
+          <%= f.collection_check_boxes :category_ids, current_user.categories.all, :id, :category %>
+          <%= f.label :category, "Or enter a new category" %>
+          <%= f.text_field :category %>
+        </div>
+        <div class='large-3 columns' data-equalizer-watch>
+          <%= f.label :source %>
+          <%= f.text_field :source %>
+          <%= f.label :image %>
+          <%= f.file_field :image %>
+          <%= f.label :public, "Family Secret?" %>
+          <div class='switch round tiny'>
+            <%= f.check_box :public, {:id=>"recipe_public"}, "yes", "no" %>
+            <%= f.label :public, "Yes" %>
+          </div>
+          <%= f.label :favorite, "Favorite?" %>
+          <div class='switch round tiny'>
+            <%= f.check_box :favorite, {:id => "recipe_favorite"}, "yes", "no" %>
+            <%= f.label :favorite, "Yes" %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <%= f.label :ingredients %>
+          <%= f.text_area :ingredients, :class => :textbox, :placeholder => "Enter ingredients with a \" \" or space only between quantity and ingredient and a new line between ingredient."%>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <%= f.label :instructions, "Directions:" %>
+          <%= f.text_area :instructions, :class => :textbox , :placeholder => "Enter directions with a new line between steps."%>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <%= f.submit :Submit, :class => 'button right' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<script src="/assets/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="/assets/navbar2.js"></script>
+<script src="/assets/waypoints.js"></script>
+<script type="text/javascript">
+  $('#body').scroll(function(){
+    if ($("#magellan").offset().top < 145){
+      $(".sub-nav").addClass('sticky')
+    } else {
+      $(".sub-nav").removeClass('sticky')
+    }
+  })
+  $(document).ready(function(){
+    $("#recipetable").tablesorter();
+    $(".filter").change(function(){
+      $("#filter").submit
+      return false;
+    });
+  })
+</script>

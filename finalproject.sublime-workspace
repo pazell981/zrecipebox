@@ -1,0 +1,1268 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"top",
+				"top_spacing"
+			],
+			[
+				"navig",
+				"navigator"
+			],
+			[
+				"com",
+				"commentspanel"
+			],
+			[
+				"ins",
+				"instructionspanel"
+			],
+			[
+				"ingre",
+				"ingredientspanel"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"pan",
+				"panel"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"up",
+				"upcase"
+			],
+			[
+				"t",
+				"tbody	Tag"
+			],
+			[
+				"rec",
+				"recipe_box"
+			],
+			[
+				"recipe_",
+				"recipe_categories"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"recip",
+				"recipe_categories"
+			],
+			[
+				"reci",
+				"recipe_categories"
+			],
+			[
+				"category",
+				"category"
+			],
+			[
+				"friend_",
+				"friend_params"
+			],
+			[
+				"fri",
+				"friend"
+			],
+			[
+				"friends",
+				"friends_pending"
+			],
+			[
+				"frien",
+				"friends"
+			],
+			[
+				"curre",
+				"current_user"
+			],
+			[
+				"whi",
+				"white"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"des",
+				"destroy"
+			],
+			[
+				"h",
+				"h5	Tag"
+			],
+			[
+				"add",
+				"addfriend"
+			],
+			[
+				"cat",
+				"category"
+			],
+			[
+				"but",
+				"button_to"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"Categ",
+				"Category"
+			],
+			[
+				"hid",
+				"hidden_field"
+			],
+			[
+				"text",
+				"text_field"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"categor",
+				"categories"
+			],
+			[
+				"frie",
+				"friends"
+			],
+			[
+				"users",
+				"users_show_path"
+			],
+			[
+				"each",
+				"each_with_index"
+			],
+			[
+				"ing",
+				"ingredients"
+			],
+			[
+				"new",
+				"new_categories"
+			],
+			[
+				"enter",
+				"enterrecipe"
+			],
+			[
+				"in",
+				"instructions"
+			],
+			[
+				"has",
+				"has_many"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"source",
+				"source"
+			],
+			[
+				"act",
+				"actual_time"
+			],
+			[
+				"ac",
+				"actual_time"
+			],
+			[
+				"sub",
+				"subtitle"
+			],
+			[
+				"head",
+				"header	<header>"
+			],
+			[
+				"con",
+				"controller"
+			],
+			[
+				"form",
+				"form_for"
+			],
+			[
+				"sessi",
+				"sessions#index"
+			],
+			[
+				"log",
+				"login"
+			],
+			[
+				"login",
+				"login_panel"
+			],
+			[
+				"panel",
+				"panel2"
+			],
+			[
+				"enc",
+				"encrypted_password"
+			],
+			[
+				"sta",
+				"start_bidding"
+			],
+			[
+				"cont",
+				"cont_bidding"
+			],
+			[
+				"end",
+				"end_bidding"
+			],
+			[
+				"bid",
+				"bid"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"rand",
+				"random_background"
+			],
+			[
+				"styl",
+				"stylesheets"
+			],
+			[
+				"post",
+				"posts_feed"
+			],
+			[
+				"crea",
+				"created_at"
+			],
+			[
+				"blo",
+				"blog_id"
+			],
+			[
+				"use",
+				"user_id"
+			],
+			[
+				"curr",
+				"current_user"
+			],
+			[
+				"blog",
+				"blog_info"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"cur",
+				"current_user"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"requi",
+				"require_login"
+			],
+			[
+				"si",
+				"sign_out"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"ses",
+				"session#index"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"session",
+				"session#destroy"
+			],
+			[
+				"dis",
+				"discussion"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"pro",
+				"products_path"
+			],
+			[
+				"Prod",
+				"Product"
+			],
+			[
+				"Cat",
+				"Category"
+			],
+			[
+				"products_",
+				"products_path"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"first",
+				"first_name"
+			],
+			[
+				"em",
+				"email_address"
+			],
+			[
+				"jq",
+				"jquery_code"
+			],
+			[
+				"activi",
+				"activity"
+			],
+			[
+				"to",
+				"to_s"
+			],
+			[
+				"acti",
+				"activity"
+			],
+			[
+				"nu",
+				"number/index"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"too",
+				"toohigh"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"lang",
+				"language"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"fade",
+				"fadeToggle"
+			],
+			[
+				"opp",
+				"opponent_play"
+			],
+			[
+				"oppon",
+				"opponent_play"
+			],
+			[
+				"pla",
+				"play_buttons"
+			],
+			[
+				"your",
+				"your_play"
+			],
+			[
+				"room",
+				"room_id"
+			],
+			[
+				"play",
+				"player2"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pl",
+				"player2"
+			],
+			[
+				"player",
+				"player1"
+			],
+			[
+				"op",
+				"opponent_name"
+			],
+			[
+				"chal",
+				"class='chaltime"
+			],
+			[
+				"game",
+				"gametime"
+			],
+			[
+				"ch",
+				"challengee"
+			],
+			[
+				"cha",
+				"challenge"
+			],
+			[
+				"challen",
+				"challengee"
+			],
+			[
+				"y",
+				"yield"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"reve",
+				"reverse_original"
+			],
+			[
+				"belt",
+				"belt_level"
+			],
+			[
+				"doo",
+				"dojo_location"
+			],
+			[
+				"set",
+				"setBelt"
+			],
+			[
+				"bel",
+				"belt_level"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/recipes/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 4892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/recipes/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1945,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 3793,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/assets/javascripts/navbar2.js",
+			"settings":
+			{
+				"buffer_size": 1401,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/recipes_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1828,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 1422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/recipe.rb",
+			"settings":
+			{
+				"buffer_size": 1163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/recipes.css.scss",
+			"settings":
+			{
+				"buffer_size": 1046,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ht",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: htm",
+				"Snippet: htmlboiler"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: html fo",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: html f",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"p",
+				"Package Control: Disable Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: CSS - content: '';"
+			],
+			[
+				"Snippet: html",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: cod",
+				"Snippet: CodeIgniter Controller"
+			],
+			[
+				"Snippet: mod",
+				"Snippet: CodeIgniter Model"
+			],
+			[
+				"htm",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			],
+			[
+				"fold",
+				"Folders List"
+			]
+		],
+		"width": 429.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/javascripts/application.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/recipebox_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/vendor/assets/javascripts/jquery.scrollTo-1.4.2-min.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/vendor/assets/javascripts/underscore-min.min.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/recipe_box.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/category.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/recipe_category.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140909051541_rename_column_owner_id_to_user_id_on_recipes.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140909012403_change_table_recipe_categories.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/schema.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/application.scss.css",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/config/routes.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/friends/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/friends/new.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/cookbook_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/categories_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/friendsbox_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/friends_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/config/environments/development.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/helpers/friends_helper.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/friend.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/recipes_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/application_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908212230_change_column_status_in_friends_to_string.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908192302_rename_column_user1_id_to_user_id_on_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908194433_change_column_status_in_friends_to_integer.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908194557_change_column_favorites_in_favorite_to_integer.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908191814_rename_column_user2_id_to_friend_id_on_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/recipes.css.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908190131_rename_column_user_id_to_user2_id_on_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/recipe.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908183201_change_status_format_in_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908185829_rename_column_user_id_to_user1_id_on_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908184951_remove_user1_id_from_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140908185433_add_column_user_to_friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/categories/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/recipes/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/friendsbox/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/categories/edit.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/categories/new.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/users/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/users_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/users/show.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/users/edit.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907205806_add_column_ingredients_to_recipe.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907210030_change_favorite_to_binary.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907205720_drop_table_ingredients.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/helpers/recipebox_helper.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/helpers/recipes_helper.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/user.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/sessions/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907181112_rename_table_recipe_to_recipes.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/sessions_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907174932_rename_table.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907172745_create_categories.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907173032_create_join_table.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907144057_rename_recipes_to_recipe.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/comment.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/ingredient.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/friends.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/favorite.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/ingredients.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140907143804_rename_table_recipes_to_recipe.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/recipes.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/recipes/new.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/Gemfile",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/config/environments/production.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/layouts/application.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/helpers/application_helper.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/helpers/sessions_helper.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/comments.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/controllers/session_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/views/session/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/models/categories.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/db/migrate/20140905195658_rename_password_to_encrypted_password_in_user.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/blackbelt/public/stylesheets/style.css",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/blackbelt/server.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/blackbelt/routes/index.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/blackbelt/views/index.ejs",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/blackbelt/public/javascripts/bid.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/helpers/session_helper.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/layouts/application.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/stylesheets/sass/style.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/globals.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/globals.scss.haml",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/app/assets/stylesheets/application.css.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/public/stylesheets/sass/style.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/config/mongoose.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/config/config.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/server/views/index.ejs",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/server.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/config/routes.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/public/stylesheets/sass/style.sass",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/public/stylesheets/sass/style.sass.less",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/public/sass/style.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/public/sass/stylesheets/style.css.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/public/stylesheets/style.css",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 8/Angular/Advanced/server.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/views/index.ejs",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 11/final_project/models/users.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/users_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/comments_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/blogs_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/posts_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/intermediate_9/app/views/products/show.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/posts/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/blogs/new.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/db/schema.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/assets/stylesheets/posts.css.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/session/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/posts/show.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/blogs/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/config/routes.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/blogs/edit.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/blogs/show.html.erb",
+		"/Users/zguy981/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/application_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/intermediate_9/app/controllers/products_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/users/index.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/users/edit.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/admins_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/assets/stylesheets/application.css",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/controllers/session_controller.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/models/user.rb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/assets/stylesheets/users.css.scss",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/advanced_1/app/views/users/show.html.erb",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 10/Rails Views and Controllers/intermediate_9/app/views/products/edit.html.erb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"application.html.erb",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"slow",
+			"login",
+			"f.",
+			"29",
+			"input_text",
+			"precompile",
+			"magel",
+			"mage",
+			"<p class='name'></p>",
+			"post",
+			"Post",
+			"post",
+			"Post",
+			"post",
+			"Post",
+			"post",
+			"deep_linking",
+			"deep_linkin",
+			"user",
+			"info",
+			"34",
+			"user",
+			"status",
+			"</p>",
+			"<p>",
+			"\"",
+			"number",
+			"p",
+			"survey.find(",
+			"Post",
+			"post",
+			"status",
+			"wait",
+			"puts @sum",
+			"x[0]",
+			"y[0]",
+			"timeRelative",
+			"image_file",
+			"no file chosen",
+			"files",
+			"good",
+			"CustomerFactory",
+			"ProductFactory",
+			"new_customer",
+			"customers",
+			"exist",
+			"Customer",
+			"customers",
+			"Customer",
+			"customers",
+			"TaskSchema",
+			"javasscripts",
+			"public",
+			"js",
+			"OrderFactory",
+			"Customer",
+			"date",
+			"age",
+			"friend",
+			"UserSchema",
+			"SoftwareBadges",
+			"\"",
+			"name",
+			"req.body",
+			"h6",
+			"img/",
+			"svg",
+			"rcolor",
+			"1",
+			"=",
+			"x",
+			"new array()",
+			"array()",
+			"random",
+			"x",
+			"\"",
+			"users/home",
+			"welcome",
+			"\"",
+			">",
+			"\"></",
+			"\"",
+			"html",
+			"\"",
+			">",
+			"\"",
+			">",
+			"\"",
+			">",
+			"\"",
+			">\n",
+			"\"",
+			"page",
+			".i",
+			"[i]",
+			"[leads]",
+			"tr",
+			"input",
+			"\"",
+			"ul",
+			"tr",
+			"td",
+			"tr",
+			"td",
+			"tr",
+			"td",
+			" \n",
+			"th",
+			"ease-in-out",
+			"2s",
+			"all",
+			"welcome",
+			"switch",
+			"updated_at",
+			"created_at",
+			"tab",
+			"#",
+			"dog",
+			");\n",
+			"$userid",
+			"sidebar	"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"y",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/recipes/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 4892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4879,
+								4879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/recipes/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1945,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 3793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								520,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "vendor/assets/javascripts/navbar2.js",
+					"settings":
+					{
+						"buffer_size": 1401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/recipes_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1343,
+								1343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 1422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/recipe.rb",
+					"settings":
+					{
+						"buffer_size": 1163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/stylesheets/recipes.css.scss",
+					"settings":
+					{
+						"buffer_size": 1046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1046,
+								1046
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 276.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.529808180894,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 212.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true
+}

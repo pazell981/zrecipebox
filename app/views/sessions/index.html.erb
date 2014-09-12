@@ -1,0 +1,67 @@
+<dl class="accordion" data-accordion>
+  <dd class="accordion-navigation">
+    <a href="#panel1">About RecipeBox</a>
+    <div id="panel1" class="content active">
+    	<p>Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel2" id='loginpanel'>Log-in</a>
+    <div id="panel2" class="content">
+    	<% if flash[:error] %>
+          <script type="text/javascript">
+          $(document).ready(function(){
+              $('#loginpanel').click()
+              return false
+            })
+          </script>
+    	  <div data-alert class="alert-box alert radius">
+    	    <%= flash[:error] %>
+    	    <a href="#" class="close">&times;</a>
+    	  </div>
+    	<% end %>
+    	<%= form_tag(sessions_path) do %>
+    	  <%= label_tag :email %>
+    	  <%= text_field_tag :email %>
+    	  <%= label_tag :password %>
+    	  <%= password_field_tag :password %>
+    	  <%= submit_tag('Submit', :class => :button) %>
+    	<% end %>
+    </div>
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel3">Create an account</a>
+    <div id="panel3" class="content" id='newuserpanel'>
+    	<%= form_for @user do |f| %>
+        <% if flash[:errors] %>
+          <script type="text/javascript">
+            $(document).ready(function(){
+              $('#newuserpanel').click()
+              return false
+            })
+          </script>
+    	  <div id="error_explanation" class='alert-box warning radius'>
+            <ul>
+    	      <% flash[:errors].each do |msg| %>
+    	        <li><%= msg %></li>
+    	      <% end %>
+    	    </ul>
+    	  </div>
+    	<% end %>
+    	  <%= f.label :first_name %>
+    	  <%= f.text_field :first_name %>
+    	  <%= f.label :last_name %>
+    	  <%= f.text_field :last_name %>
+    	  <%= f.label :email %>
+    	  <%= f.text_field :email %> 
+    	  <%= f.label :password %>
+    	  <%= f.password_field :password %> 
+    	  <%= f.label :password_confirmation %>
+    	  <%= f.password_field :password_confirmation %>
+    	  <%= f.submit "Create Account", :class => 'button' %>
+    	<% end %>
+    </div>
+  </dd>
+</dl>
+
+
