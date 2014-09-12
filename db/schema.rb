@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140910194830) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: true do |t|
     t.string   "category"
     t.integer  "user_id"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140910194830) do
     t.datetime "updated_at"
   end
 
-  add_index "categories", ["user_id"], name: "index_categories_on_user_id"
+  add_index "categories", ["user_id"], name: "index_categories_on_user_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.text     "comment"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 20140910194830) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["recipe_id"], name: "index_comments_on_recipe_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["recipe_id"], name: "index_comments_on_recipe_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "favorites", force: true do |t|
     t.integer  "recipe_id"
@@ -42,8 +45,8 @@ ActiveRecord::Schema.define(version: 20140910194830) do
     t.string   "favorite"
   end
 
-  add_index "favorites", ["recipe_id"], name: "index_favorites_on_recipe_id"
-  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
+  add_index "favorites", ["recipe_id"], name: "index_favorites_on_recipe_id", using: :btree
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
 
   create_table "friends", force: true do |t|
     t.string   "status"
@@ -53,8 +56,8 @@ ActiveRecord::Schema.define(version: 20140910194830) do
     t.integer  "friend_id"
   end
 
-  add_index "friends", ["friend_id"], name: "index_friends_on_friend_id"
-  add_index "friends", ["user_id"], name: "index_friends_on_user_id"
+  add_index "friends", ["friend_id"], name: "index_friends_on_friend_id", using: :btree
+  add_index "friends", ["user_id"], name: "index_friends_on_user_id", using: :btree
 
   create_table "recipe_boxes", force: true do |t|
     t.integer  "recipe_id"
@@ -64,9 +67,9 @@ ActiveRecord::Schema.define(version: 20140910194830) do
     t.integer  "recipe_category_id"
   end
 
-  add_index "recipe_boxes", ["recipe_category_id"], name: "index_recipe_boxes_on_recipe_category_id"
-  add_index "recipe_boxes", ["recipe_id"], name: "index_recipe_boxes_on_recipe_id"
-  add_index "recipe_boxes", ["user_id"], name: "index_recipe_boxes_on_user_id"
+  add_index "recipe_boxes", ["recipe_category_id"], name: "index_recipe_boxes_on_recipe_category_id", using: :btree
+  add_index "recipe_boxes", ["recipe_id"], name: "index_recipe_boxes_on_recipe_id", using: :btree
+  add_index "recipe_boxes", ["user_id"], name: "index_recipe_boxes_on_user_id", using: :btree
 
   create_table "recipe_categories", id: false, force: true do |t|
     t.integer "category_id", null: false
@@ -91,6 +94,11 @@ ActiveRecord::Schema.define(version: 20140910194830) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "recipes_categories", id: false, force: true do |t|
+    t.integer "category_id", null: false
+    t.integer "recipe_id",   null: false
   end
 
   create_table "users", force: true do |t|
