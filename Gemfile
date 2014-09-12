@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-gem 'pg'
+
+gem 'thin'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -60,7 +60,9 @@ gem 'angularjs-rails'
 
 #gem 'puma'
 
-group :development do
+group :development, :test do
+	# Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
 	gem 'betterlorem', '~> 0.1.2'
 	gem 'lorem-image-ware', '~> 0.1.0'
 	# Use hirb
@@ -69,6 +71,9 @@ group :development do
   gem "binding_of_caller"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
  	gem 'spring'
+	gem "rspec"
 end
 
-gem "rspec"
+group :production do 
+	gem 'pg'
+end
