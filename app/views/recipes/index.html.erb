@@ -21,7 +21,7 @@
               <tbody>
                 <tr onclick="document.location = '/recipes/<%=recipe.id %>';">
                   <td>
-                    <% if recipe.image_file_name && recipe.image_file_name != "/images/thumb/missing.jpg" %>
+                    <% if recipe.image && recipe.image_file_name != "/images/thumb/missing.jpg" %>
                       <%= image_tag recipe.image.url(:thumb) %>
                     <% end %>
                   </td>
@@ -58,9 +58,11 @@
         </thead>
         <tbody>
             <tr ng-repeat="recipe in recipes | filter: { title: filter.title, category: filter.category, favorite: filter.favorite } | orderBy: title" >
-              <td><img src="{{recipe.image}}"></td>
-              <td>{{recipe.title}}</td>
-              <td>{{recipe.category_id}}</td>
+              <a href="/recipe/{{recipe.id}}">
+                <td><img src="{{recipe.image}}"></td>
+                <td>{{recipe.title}}</td>
+                <td>{{recipe.category_id}}</td>
+              </a>
             </tr>
         </tbody>
       </table>
@@ -147,22 +149,16 @@
     <% end %>
   </div>
 </div>
-<script src="/assets/jquery.scrollTo-1.4.2-min.js"></script>
-<script src="/assets/navbar2.js"></script>
-<script src="/assets/waypoints.js"></script>
 <script type="text/javascript">
-  $('#body').scroll(function(){
-    if ($("#magellan").offset().top < 145){
-      $(".sub-nav").addClass('sticky')
-    } else {
-      $(".sub-nav").removeClass('sticky')
-    }
-  })
   $(document).ready(function(){
-    $("#recipetable").tablesorter();
-    $(".filter").change(function(){
-      $("#filter").submit
-      return false;
+    $('#body').scroll(function(){
+      if ($("#magellan").offset().top < 145){
+        $(".sub-nav").addClass('sticky');
+      } else {
+        $(".sub-nav").removeClass('sticky');
+      }
     });
-  })
+    $("#recipetable").tablesorter();
+  });
 </script>
+<%= javascript_include_tag 'waypoints', 'jquery.scrollTo-1.4.2-min', 'navbar2', 'recipes2' %>

@@ -22,7 +22,7 @@ class Recipe < ActiveRecord::Base
 	
 	validates :description, :format     => { :with => /\A([A-Za-z\s]*)\z/i}
 	
-	has_attached_file :image, :styles 	=> { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.jpg"
+	has_attached_file :image, :styles 	=> { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:user_id/:style/missing.jpg"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   
   validates :yield,   		:format     => { :with => /\A([\dA-Za-z\s]*)\z/i }
