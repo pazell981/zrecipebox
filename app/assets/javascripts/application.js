@@ -25,13 +25,15 @@
 //= require masonry/jquery.infinitescroll.min
 //= require masonry/modernizr-transitions
 //= require masonry/box-maker
+//= require jquery.scrollTo-1.4.2-min
+//= require waypoints
 
 $(function(){ $(document).foundation(); });
 
   $(document).ready(function(){
     $("#login").click(function(){
-      $('#loginpanel').click()
-      return false
+    	$(".accordion-navigation .content").removeClass('active')
+      $("#panel2").addClass('active')
     })
     $('.disabled').click(function(e){
       return false;

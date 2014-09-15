@@ -1,3 +1,4 @@
+
 var recipeApp = angular.module('recipeApp',[]);
 
 recipeApp.controller('RecipeCtrl', function($scope, $http){

@@ -25,10 +25,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # fileuploading
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'fog'
+#gem 'fog'
 
 # Use ActiveModel has_secure_password
- gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 gem 'unicorn-rails'
@@ -65,7 +65,6 @@ group :development do
 	gem 'lorem-image-ware', '~> 0.1.0'
 	# Use hirb
 	gem 'hirb'
-  
   
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
  	gem 'spring'

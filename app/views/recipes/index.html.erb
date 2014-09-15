@@ -8,7 +8,7 @@
     <div class id='magellan' style="top: 145px">
       <dl class="sub-nav">
         <% @alphabet.each do |a| %>
-          <dd><a href="#<%= a %>" class='magellan_link'><%= a.upcase %></a></dd>
+          <dd class='alphabet'><a href="#<%= a %>" class='magellan_link <%= a %>'><%= a.upcase %></a></dd>
         <% end %>
       </dl>
     </div>
@@ -161,4 +161,4 @@
     $("#recipetable").tablesorter();
   });
 </script>
-<%= javascript_include_tag 'waypoints', 'jquery.scrollTo-1.4.2-min', 'navbar2', 'recipes2' %>
+<%= javascript_include_tag 'navbar2' %>

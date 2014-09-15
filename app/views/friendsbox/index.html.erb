@@ -66,22 +66,16 @@
       </table>
   </div>
 </div>
-<script src="/assets/jquery.scrollTo-1.4.2-min.js"></script>
-<script src="/assets/navbar2.js"></script>
-<script src="/assets/waypoints.js"></script>
 <script type="text/javascript">
-  $('#body').scroll(function(){
-    if ($("#magellan").offset().top < 145){
-      $(".sub-nav").addClass('sticky')
-    } else {
-      $(".sub-nav").removeClass('sticky')
-    }
-  })
   $(document).ready(function(){
-    $("#recipetable").tablesorter();
-    $(".filter").change(function(){
-      $("#filter").submit
-      return false;
+    $('#body').scroll(function(){
+      if ($("#magellan").offset().top < 145){
+        $(".sub-nav").addClass('sticky');
+      } else {
+        $(".sub-nav").removeClass('sticky');
+      }
     });
-  })
+    $("#recipetable").tablesorter();
+  });
 </script>
+<%= javascript_include_tag 'navbar2' %>

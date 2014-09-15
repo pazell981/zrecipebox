@@ -36,4 +36,16 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :bucket => ENV['S3_BUCKET_NAME']||'zrecipebox',
+    :s3_credentials => {
+      :access_key_id => ENV['S3_ACCESS_KEY_ID']||'AKIAJBQE2K537R3KMYCA',
+      :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']||'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'
+    },
+    :provider => 'AWS',
+    :region => 'us-west-1',
+    :scheme => 'https'
+  }
+
 end
