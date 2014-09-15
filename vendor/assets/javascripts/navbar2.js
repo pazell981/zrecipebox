@@ -1,11 +1,4 @@
 $(function() {
-
-	// Do our DOM lookups beforehand
-	var nav_container = $("#magellan");
-	var nav = $("dl.sub-nav");
-	
-	var top_spacing = 150;
-	var waypoint_offset = 50;
 	
 	var sections = $("#panel1 section");
 	var navigation_links = $(".alphabet a");

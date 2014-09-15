@@ -29,9 +29,11 @@ class RecipesController < ApplicationController
     params[:recipe][:category_ids].reject!{|c| c.empty?}
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
-      params[:recipe][:category_ids].each do |c|
-          @recipe_categories = RecipeCategory.new(:recipe_id => @recipe.id, :category_id => c)
-          @recipe_categories.save
+      if params[:recipe][:category_ids]
+        params[:recipe][:category_ids].each do |c|
+            @recipe_categories = RecipeCategory.new(:recipe_id => @recipe.id, :category_id => c)
+            @recipe_categories.save
+        end
       end
       if params[:recipe][:category] != ""
         @category = Category.new(:category => params[:recipe][:category], :user_id => session[:user_id])
@@ -45,6 +47,13 @@ class RecipesController < ApplicationController
       end
       redirect_to recipes_path
     else
+      @subtitle = "My Recipes"
+      @alphabet = ('a'..'z').to_a
+      @recipes={}
+      @alphabet.each do |a|
+        @recipes[a]=Recipe.where("user_id=#{current_user.id} AND LOWER(title) LIKE '#{a}%'").order('title')
+      end
+      @categories = Category.where("user_id = #{current_user.id}")
       render :index
     end
   end

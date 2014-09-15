@@ -18,9 +18,9 @@ class Recipe < ActiveRecord::Base
 	attr_accessor :image, :category, :favorite
 
 	validates :title,    		:presence   => true,
-	          :format               		=> { :with => /\A([A-Za-z\s]*)\z/i}
+	          :format               		=> { :with => /\A([A-Za-z\W\s]*)\z/i}
 	
-	validates :description, :format     => { :with => /\A([A-Za-z\s]*)\z/i}
+	validates :description, :format     => { :with => /\A([A-Za-z\W\s]*)\z/i}
 	
 	has_attached_file :image, :styles 	=> { :medium => "300x300>", :thumb => "100x100>" }, 
 														:default_url => "/images/:user_id/:style/missing.jpg"
