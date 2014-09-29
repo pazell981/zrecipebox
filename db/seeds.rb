@@ -5,7 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-1000.times {
-	Recipe.create!(title: "Recipe", description: BetterLorem.p(1, true, false), ingredients: BetterLorem.p(1, false, false), instructions: BetterLorem.p(1, false, false))
-}

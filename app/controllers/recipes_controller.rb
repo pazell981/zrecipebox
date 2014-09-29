@@ -31,8 +31,8 @@ class RecipesController < ApplicationController
     if @recipe.save
       if params[:recipe][:category_ids]
         params[:recipe][:category_ids].each do |c|
-            @recipe_categories = RecipeCategory.new(:recipe_id => @recipe.id, :category_id => c)
-            @recipe_categories.save
+          @recipe_categories = RecipeCategory.new(:recipe_id => @recipe.id, :category_id => c)
+          @recipe_categories.save
         end
       end
       if params[:recipe][:category] != ""
@@ -63,16 +63,17 @@ class RecipesController < ApplicationController
     @liked = Favorite.find_by_user_id_and_recipe_id(current_user.id, params[:id])
     @like = Favorite.new
     @comment = Comment.new
-    @recipe = Recipe.includes(:favorites).includes(:categories).find(params[:id])
+    @recipe = Recipe.joins('LEFT JOIN recipe_categories ON recipes.id = recipe_categories.recipe_id').includes(:categories).joins('LEFT JOIN favorites ON recipes.id = favorites.recipe_id').find(params[:id])
     @comments = Comment.includes(:user).where(recipe_id: params[:id])
   end
 
   def edit
     @subtitle = "My Recipes"
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.joins('LEFT JOIN recipe_categories ON recipes.id = recipe_categories.recipe_id').joins('LEFT JOIN favorites ON recipes.id = favorites.recipe_id').find(params[:id])
   end
 
   def update
+    params[:recipe][:category_ids].reject!{|c| c.empty?}
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
       redirect_to recipe_path(params[:id])
@@ -86,9 +87,6 @@ class RecipesController < ApplicationController
     @recipe.destroy
     redirect_to recipes_path
   end
-
-
-
 
   def require_login
     unless signed_in?

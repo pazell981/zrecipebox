@@ -1,6 +1,7 @@
 // Place all the styles related to the cookbook controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 #masonry-container {
   padding: 5px;
   margin-bottom: 20px;
@@ -11,16 +12,34 @@
           border-radius: 5px;
 }
 
+#infscr-loading { 
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  left: 45%;
+  bottom: 40px;
+  width: 200px;
+  padding: 10px;
+  background: #000; 
+  opacity: 0.8;
+  color: #FFF;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-.col1 { width: 225px; }
-.col2 { width: 225px; }
-.col3 { width: 225px; }
-.col4 { width: 225px; }
+.col1 { width: 100px; }
+.col2 { width: 150px; }
+.col3 { width: 200px; }
+.col4 { width: 250px; }
+.col5 { width: 500px; }
 
-.col1 img { max-width: 220px; }
-.col2 img { max-width: 220px; }
-.col3 img { max-width: 220px; }
-.col4 img { max-width: 220px; }
+.col1 img { max-width: 100px; }
+.col2 img { max-width: 150px; }
+.col3 img { max-width: 200px; }
+.col4 img { max-width: 250px; }
+.col5 img { max-width: 500px; }

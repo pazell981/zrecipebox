@@ -103,8 +103,15 @@
 			<table>
 				<% newLineSplit(@recipe.ingredients).each do |ingredient| %>
 						<tr>
-							<% spaceSplit(ingredient).each do |quantity| %>
-								<td><%= quantity %></td>
+							<% if letterTest(ingredient) %>
+								<td></td>
+								<td><%= ingredient %></td>
+							<% elsif headerTest(ingredient) %>
+								<td><h6><%= headerSplit(ingredient) %></h6></td>
+							<% else %>
+								<% spaceSplit(ingredient).each do |quantity| %>
+									<td><%= quantity %></td>
+								<% end %>
 							<% end %>
 						</tr>
 				<% end %>

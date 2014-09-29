@@ -1,7 +1,11 @@
 
 
-<div>
-  <%= lorem_image_tag(:tag => "recipes") %>
+<div class='box col<%= rand(4)+1 %>'>
+	<% if recipe.image && recipe.image_file_name != "/images/thumb/missing.jpg" %>
+	  <%= image_tag recipe.image.url(:thumb) %>
+	<% end %>
  	<h5><%= recipe.title %></h5>
-  <small><em><%= recipe.description %></em></small>
+ 	<div>
+	  <small><em><%= recipe.description %></em></small>
+	</div>
 </div>

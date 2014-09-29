@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: recipebox_development
-  pool: 5
+  pool: 16
   username: postgres
   password: hyperion
 
@@ -10,7 +10,7 @@ test: &TEST
   adapter: postgresql
   encoding: utf8
   database: recipebox_test
-  pool: 5
+  pool: 16
   username: 
   password:
 
@@ -18,6 +18,6 @@ production:
   adapter: postgresql
   encoding: utf8
   database: recipebox_production
-  pool: 5
+  pool: 16
   username: 
   password:

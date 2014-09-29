@@ -33,7 +33,9 @@
       </div>
       <div class='large-3 columns' id='categories' data-equalizer-watch>
         <label>Category:</label>
-        <%= f.collection_check_boxes :category_ids, current_user.categories.all, :id, :category %>
+        <ul>
+          <%= f.collection_check_boxes :category_ids, current_user.categories.all, :id, :category %>
+        </ul>
         <%= f.label :category, "Or enter a new category" %>
         <%= f.text_field :category %>
       </div>
@@ -57,13 +59,13 @@
     <div class='row'>
       <div class='large-12 columns'>
         <%= f.label :ingredients %>
-        <%= f.text_area :ingredients, :class => :textbox, :placeholder => "Enter ingredients with a \" \" or space only between quantity and ingredient and a new line between ingredient."%>
+        <%= f.text_area :ingredients, :class => :textbox, :placeholder => "Enter ingredients with a \" \" (space) only between quantity and ingredient and a new line between ingredient. To use  headers in ingredient list, use \"{}\" (curly braces) on headers." %>
       </div>
     </div>
     <div class='row'>
       <div class='large-12 columns'>
         <%= f.label :instructions, "Directions:" %>
-        <%= f.text_area :instructions, :class => :textbox , :placeholder => "Enter directions with a new line between steps."%>
+        <%= f.text_area :instructions, :class => :textbox , :placeholder => "Enter directions with a new line between steps.  To include headers, \"{}\" (curly braces) on headers." %>
       </div>
     </div>
     <div class='row'>

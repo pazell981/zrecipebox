@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+FinalProject::Application.routes.draw do
 
   resources :favorites, :only => [:create]
 
@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   resources :recipebox, :only => [:index, :create, :show, :edit, :destroy]
   
-  resources :cookbooks, :only => [:index]
+  resources :cookbooks do
+    collection { get :stream }
+  end
 
   resources :comments, :only => [:create]
 
@@ -23,6 +25,8 @@ Rails.application.routes.draw do
   get "/signin" => 'sessions#index', :as => :login
 
   get "/signout" => 'sessions#destroy', :as => :logoff
+
+  get "/cookbooks/index" => 'cookbooks#index'
 
   root 'sessions#index'
 
