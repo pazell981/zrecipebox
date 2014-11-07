@@ -28,7 +28,7 @@
 //= require jquery.scrollTo-1.4.2-min
 //= require waypoints
 
-$(function(){ $(document).foundation(); });
+$(document).foundation();
 
   $(document).ready(function(){
     $("#login").click(function(){

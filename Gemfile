@@ -42,14 +42,14 @@ gem 'puma'
 # gem 'debugger', group: [:development, :test]
 
 # Use foundation
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.4.5.0'
 
 # For cookbook
 gem 'will_paginate', '~> 3.0.5'
 gem 'masonry-rails'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.4'
 
 # for filtering
 gem 'has_scope'
