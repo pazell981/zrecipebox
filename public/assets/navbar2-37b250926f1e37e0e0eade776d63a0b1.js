@@ -1,1 +1,0 @@
-$(function(){var t=($("#magellan"),$("dl.sub-nav"),$("#panel1 section")),e=$(".alphabet a");t.waypoint(function(t,a){var n=$(this);n="up"===a?n.prev():n.next();var o=$("."+n.attr("id"));e.removeClass("selected"),o.addClass("selected")},{context:"#body",offset:160}),e.click(function(){$("#body").scrollTo($(this).attr("href"),{duration:1e3,offset:-160})})});

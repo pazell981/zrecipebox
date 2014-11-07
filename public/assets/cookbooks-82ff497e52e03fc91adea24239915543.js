@@ -1,1 +1,0 @@
-var recipeApp=angular.module("recipeApp",[]);recipeApp.controller("CookbookCtrl",function(e,o){var c;o.get("/recipes.json").success(function(o){console.log(o),e.recipes=o,c=Date.now()}),c+120==Date.now()&&o.get("/recipes.json").success(function(o){console.log(o),e.recipes=o,c=Date.now()})});

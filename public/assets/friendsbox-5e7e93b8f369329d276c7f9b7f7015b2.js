@@ -1,1 +1,0 @@
-var recipeApp=angular.module("recipeApp",[]);recipeApp.controller("FriendBoxCtrl",function(e,o){o.get("/friendsbox.json").success(function(o){console.log(o),e.recipes=o})});

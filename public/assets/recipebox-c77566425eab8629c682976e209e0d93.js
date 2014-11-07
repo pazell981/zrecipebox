@@ -1,1 +1,0 @@
-var recipeApp=angular.module("recipeApp",[]);recipeApp.controller("RecipeBoxCtrl",function(e,c){c.get("/recipebox.json").success(function(c){console.log(c),e.recipes=c})});
