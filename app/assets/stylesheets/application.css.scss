@@ -22,8 +22,32 @@
  */
 
 @import "foundation_and_overrides";
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,400italic,700italic);
+@font-face {
+	font-family: 'Josefin Slab Regular';
+  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-Regular.ttf');
+  font-weight: normal;
+}
+@font-face {
+	font-family: 'Josefin Slab Bold';
+  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+	font-family: 'Josefin Slab Italic';
+  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-Italic.ttf');
+  font-weight: italic;
+}
+@font-face {
+	font-family: 'Josefin Slab Bold Italic';
+  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-BoldItalic.ttf');
+  font-weight: bold italic;
+}
+@font-face {
+	font-family: 'Pacifico';
+  src: url('/assets/fonts/Pacifico/Pacifico.ttf');
+  font-weight: normal;
+  font-style: cursive;
+}
 @import 'foundation-icons';
 
 @font-face {
