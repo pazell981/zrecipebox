@@ -46,11 +46,11 @@
     			        <% end %>
     			        <% if signed_in? %>
       			        <li class="has-form">
-      			           <%= link_to('Log-out', logoff_path, :class => :button) %>
+      			           <%= link_to('Log-out', logoff_path, :class => :button :secondary) %>
       			        </li>
                   <% else %>
                   	<li class="has-form">
-                      <a href="#" id='login' class='button'>Log-in</a>
+                      <a href="#" id='login' class='button secondary'>Log-in</a>
     			        	</li>
                 <% end %>
     			      </ul>
