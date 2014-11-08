@@ -21,34 +21,9 @@
  *= require 'masonry/transitions'
  */
 
-@import "foundation_and_overrides";
-@font-face {
-	font-family: 'Josefin Slab';
-  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-Regular.ttf');
-  font-weight: normal;
-}
-@font-face {
-	font-family: 'Josefin Slab';
-  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-Bold.ttf');
-  font-weight: bold;
-}
-@font-face {
-	font-family: 'Josefin Slab';
-  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-Italic.ttf');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-	font-family: 'Josefin Slab';
-  src: url('/assets/fonts/Josefin_Slab/Josefin-Slab-BoldItalic.ttf');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-	font-family: 'Pacifico';
-  src: url('/assets/fonts/Pacifico/Pacifico.ttf');
-  font-weight: normal;
-}
+@import url("/assets/fonts/Josefin_Slab/stylesheet.css")
+@import url("/assets/fonts/Pacifico/stylesheet.css")
+
 @import 'foundation-icons';
 
 @font-face {
